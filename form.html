@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Builder - Построение графиков функций</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Graph Builder</h1>
+            <p class="subtitle">Построение графиков функций формата y = f(x)</p>
+        </header>
+
+        <div class="main-content">
+
+            <div class="controls">
+
+                <div class="input-group">
+                    <label for="inputFunc">Введите функцию (y = f(x)):</label>
+                    <input type="text" id="inputFunc" placeholder="y = 2 * (x + 1) или y = x^2">
+                </div>
+
+                <div class="range-controls">
+
+                    <div>
+                        <label for="xMin">X min:</label>
+                        <input type="number" id="xMin" value="-10" step="1">
+                    </div>
+
+                    <div>
+                        <label for="xMax">X max:</label>
+                        <input type="number" id="xMax" value="10" step="1">
+                    </div>
+
+                    <div>
+                        <label for="yMin">Y min:</label>
+                        <input type="number" id="yMin" value="-10" step="1">
+                    </div>
+                    
+                    <div>
+                        <label for="yMax">Y max:</label>
+                        <input type="number" id="yMax" value="10" step="1">
+                    </div>
+
+                </div>
+
+                <div class="button-group">
+                    <button id="addFunc">Добавить функцию</button>
+                    <button id="plotGraphs" disabled>Построить графики</button>
+                </div>
+
+                <div class="error-message" id="errorMessage"></div>
+                <div class="success-message" id="successMessage"></div>
+
+                <div class="functions-list" id="functionsList">
+                    <h3>Добавленные функции:</h3>
+                </div>
+
+            </div>
+
+            <div class="graph-section">
+                
+                <div class="graph-container">
+                    <canvas id="graphCanvas"></canvas>
+                </div>
+
+                <div class="points-info" id="pointsInfo">
+                    <h3>Найденные точки:</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer style="text-align: center; padding: 1rem; color: #6c757d; border-top: 1px solid #e9ecef;">
+            © KitsuruDev, 2025. Все права защищены
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
